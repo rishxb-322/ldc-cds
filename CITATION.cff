@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ldc-cds: 2D lid-driven cavity solver (SIMPLE algorithm, central differences, semi-staggered grid)"
+type: software
+authors:
+  - family-names: Chowdhury
+    given-names: Rishab
+version: 0.1.0
+date-released: 2026-11-12
+license: MIT
+repository-code: "https://github.com/YOUR-GITHUB-USERNAME/ldc-cds"
+keywords:
+  - CFD
+  - lid-driven cavity
+  - SIMPLE algorithm
+  - Navier-Stokes
+  - finite difference
+references:
+  - type: article
+    authors:
+      - family-names: Ghia
+        given-names: U.
+      - family-names: Ghia
+        given-names: K. N.
+      - family-names: Shin
+        given-names: C. T.
+    title: "High-Re solutions for incompressible flow using the Navier-Stokes equations and a multigrid method"
+    journal: "Journal of Computational Physics"
+    volume: 48
+    issue: 3
+    start: 387
+    end: 411
+    year: 1982
+    doi: "10.1016/0021-9991(82)90058-4"

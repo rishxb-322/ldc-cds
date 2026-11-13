@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ldc-cds"
+version = "0.1.0"
+description = "2D lid-driven cavity solver: SIMPLE algorithm, central differences, semi-staggered grid, validated against Ghia et al. (1982)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Rishab Chowdhury" }]
+keywords = ["CFD", "lid-driven cavity", "SIMPLE algorithm", "Navier-Stokes",
+            "finite difference", "Ghia benchmark"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.21",
+    "matplotlib>=3.5",
+]
+
+# `pip install` creates an `ldc-cds` command that runs main() in ldc_cds.py
+[project.scripts]
+ldc-cds = "ldc_cds:main"
+
+[project.urls]
+Homepage = "https://github.com/YOUR-GITHUB-USERNAME/ldc-cds"
+Issues = "https://github.com/YOUR-GITHUB-USERNAME/ldc-cds/issues"
+
+# the package is a single file, ldc_cds.py
+[tool.setuptools]
+py-modules = ["ldc_cds"]
