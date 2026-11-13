@@ -26,9 +26,11 @@ standard benchmark of **Ghia et al. (1982)** at Reynolds number 100.
 ## How to run
 
 **1. Download the project.** On GitHub, click **Code → Download ZIP** and
-extract it.
+extract it. You get a folder called `ldc-cds-main`.
 
-**2. Open a terminal in the `ldc-cds` folder** and install the libraries:
+**2. Open a terminal in that folder** and install the libraries. (On Windows:
+open the folder in File Explorer, click the address bar, type `powershell` and
+press Enter.)
 
 ```bash
 pip install -r requirements.txt
@@ -59,12 +61,21 @@ folder.
 ### Or install it with pip
 
 ```bash
-pip install git+https://github.com/YOUR-GITHUB-USERNAME/ldc-cds.git
+pip install git+https://github.com/rishxb-322/ldc-cds.git
 ldc-cds
 ```
 
 The `ldc-cds` command runs the same program from any folder. (Needs
 [Git](https://git-scm.com/downloads).)
+
+**Windows:** if `ldc-cds` is "not recognized", use this instead (same program):
+
+```bash
+py -m ldc_cds
+```
+
+The results are saved in a `results` folder inside the folder you run it
+from.
 
 ## Changing the settings
 
@@ -103,6 +114,13 @@ Present solution vs Ghia et al. (101 × 101 grid):
   <img src="results/centerlines_Re100.png" width="95%" alt="Centerline velocities vs Ghia">
 </p>
 
+Files saved in `results/`:
+
+- `streamlines_Re100.png`, `velocity_Re100.png`, `centerlines_Re100.png`, `residuals_Re100.png`: the four plots
+- `velocity_field_Re100.csv`: u, v and speed at every grid point
+- `centerline_vs_ghia_Re100.csv`: present values next to Ghia's
+- `residuals_Re100.csv`: convergence history
+
 ### Grid independence
 
 The same case on four grids. The error against Ghia falls as the grid gets
@@ -118,21 +136,17 @@ finer, and changes little beyond 129 × 129:
 To repeat a row, change `n` in section 1 and run again. The saved files in
 `results/` are for the 101 × 101 grid.
 
-Files saved in `results/`:
-
-- `streamlines_Re100.png`, `velocity_Re100.png`, `centerlines_Re100.png`, `residuals_Re100.png`: the four plots
-- `velocity_field_Re100.csv`: u, v and speed at every grid point
-- `centerline_vs_ghia_Re100.csv`: present values next to Ghia's
-- `residuals_Re100.csv`: convergence history
-
 ## Reference
 
 U. Ghia, K. N. Ghia and C. T. Shin, "High-Re solutions for incompressible flow
 using the Navier-Stokes equations and a multigrid method", *Journal of
 Computational Physics* 48 (1982) 387-411.
 
-## License
+## License and author
 
 MIT: free to use and modify, keeping the author's name. See [LICENSE](LICENSE).
 
-**Author:** Rishab Chowdhury, SRM Institute of Science and Technology.
+**Author:** Rishab Chowdhury, SRM Institute of Science and Technology
+(GitHub: [rishxb-322](https://github.com/rishxb-322), email: rxxxxb117@gmail.com).
+Questions and suggestions are welcome through
+[GitHub issues](https://github.com/rishxb-322/ldc-cds/issues).

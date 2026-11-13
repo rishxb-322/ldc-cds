@@ -5,10 +5,12 @@ type: software
 authors:
   - family-names: Chowdhury
     given-names: Rishab
+    email: rxxxxb117@gmail.com
 version: 0.1.0
-date-released: 2026-11-12
+date-released: 2026-11-14
 license: MIT
-repository-code: "https://github.com/YOUR-GITHUB-USERNAME/ldc-cds"
+repository-code: "https://github.com/rishxb-322/ldc-cds"
+url: "https://github.com/rishxb-322/ldc-cds"
 keywords:
   - CFD
   - lid-driven cavity
